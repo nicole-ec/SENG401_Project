@@ -79,17 +79,19 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Education Youtube
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ action('YoutubeController@index', 'Math') }}">Math</a>
+                    <a href="{{ action('YoutubeController@index', 'Chemistry') }}">Chemistry</a>
+                    <a href="{{ action('YoutubeController@index', 'Physics') }}">Physics</a>
+                    <a href="{{ action('YoutubeController@index', 'Biology') }}">Biology</a>
+                    <a href="{{ action('YoutubeController@index', 'History') }}">History</a>
+                    <a href="{{ action('YoutubeController@index', 'ComputerScience') }}">ComputerScience</a>
                 </div>
+
+
             </div>
         </div>
     </body>

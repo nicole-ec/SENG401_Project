@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('displayresults/{subject}', 'YoutubeController@index');
+Route::get('displayresults/{subject}/keyword', 'YoutubeController@indexkeyword');
