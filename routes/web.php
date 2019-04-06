@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('displayresults/{subject}', 'YoutubeController@index');
 Route::get('displayresults/{subject}/keyword', 'YoutubeController@indexkeyword');
+
+Route::get('video/{id}', 'YoutubeController@video');

@@ -8,41 +8,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>{{ $subject }}</title>
+    <title>Video</title>
 
 </head>
-
-<!--<script src="https://apis.google.com/js/api.js"></script>-->
-
-
 <body>
   <div class=container>
-    <div class="jumbotron"><h1>{{ $subject }}</h1></div>
-
-    <form method="GET" action="{{ action('YoutubeController@indexkeyword', $subject) }}">
-
-      <div class="form-group">
-        <label for="keyword">Add Keyword(s):</label>
-        <input type="text" name="keyword" class="form-control">
-      </div>
-
-      <div class ="form-group">
-        <button type="submit" class="btn btn-primary">Search</button>
-      </div>
-    </form>
-
-
-
-    <div id="displayresults">
-      <h2>Search Results: </h2>
-    </br>
-    @foreach($results as $result)
-        <!--<a href="{{ action('YoutubeController@video', $result['id']['videoId']) }}"><u><?php //echo $result['snippet']['title'] ?></u></a>
-    </br>-->
-    <a href="{{ action('YoutubeController@video', $result['id']['videoId']) }}"><h4 style="color:black;"><?php echo $result['snippet']['title'] ?></h4></a>
-    <img src="<?php echo $result['snippet']['thumbnails']['medium']['url'] ?>">
-</br> </br>
-    @endforeach
-    </div>
-  </div>
+<!--<script src="https://apis.google.com/js/api.js"></script>-->
+<table style="height:60vw; width:100vw;">
+  <tbody>
+    <tr>
+<td class='align-middle'>
+<iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/<?php echo $id ?>"
+  frameborder="0"></iframe>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </body>
