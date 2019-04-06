@@ -17,7 +17,10 @@
 
 <body>
   <div class=container>
-    <div class="jumbotron"><h1>{{ $subject }}</h1></div>
+    <div class="jumbotron">
+      <h1>{{ $subject }}<a href="{{ url('/') }}" class="btn btn-primary btn-lg active" role="button" style = "float:right">Home</a></h1>
+
+    </div>
 
     <form method="GET" action="{{ action('YoutubeController@indexkeyword', $subject) }}">
 

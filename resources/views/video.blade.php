@@ -12,18 +12,24 @@
 
 </head>
 <body>
-  <div class=container>
-<!--<script src="https://apis.google.com/js/api.js"></script>-->
-<table style="height:60vw; width:100vw;">
-  <tbody>
-    <tr>
-<td class='align-middle'>
-<iframe id="ytplayer" type="text/html" width="640" height="360"
-  src="https://www.youtube.com/embed/<?php echo $id ?>"
-  frameborder="0"></iframe>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+  <div class="text-center">
+    <table style="height:60vw; width:100vw;">
+      <tbody>
+        <tr>
+          <td class='align-middle'>
+            <iframe id="ytplayer" type="text/html" width="1280" height="720"
+              src="https://www.youtube.com/embed/<?php echo $id ?>"
+              frameborder="0">
+            </iframe>
+          </td>
+          <td>
+        </tr>
+        <tr>
+          <div class="container">
+            <a href="{{ url('/') }}" class="btn btn-primary btn-lg active btn-block" role="button">Home</a>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
