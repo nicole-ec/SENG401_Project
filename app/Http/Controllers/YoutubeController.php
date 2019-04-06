@@ -9,8 +9,6 @@ class YoutubeController extends Controller
 {
     public function index($subject)
     {
-
-      return view('index', compact('subject'));
       $apikey = 'AIzaSyDYlh_ORyvZm3HrDFNRt24RZZCrfB531ks';
       $googleApiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' . $subject . '&maxResults=' . 10 . '&type=video&key=' . $apikey;
 
